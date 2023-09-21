@@ -29,7 +29,7 @@
                         <tr>
                             <th class="font-weight-semi-bold border-top-0 py-2">#</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Nama Customer</th>
-                            <th class="font-weight-semi-bold border-top-0 py-2">Nama Mobil</th>
+                            <th class="font-weight-semi-bold border-top-0 py-2">Nama Motor</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">No. HP</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Tanggal Order</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Actions</th>

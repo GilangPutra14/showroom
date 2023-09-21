@@ -32,7 +32,7 @@
                             <div class="col-lg-6">
                                 <address>
                                 <strong>Perusahaan:</strong><br>
-                                    Grain Showroom<br>
+                                    Enam jaya Motor Showroom<br>
                                     Jalanin Aja Dulu, Siapa Tau Jodoh<br>
                                     (+62) 858 8224 5529
                                 </address>
