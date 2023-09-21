@@ -28,9 +28,9 @@
                     <ul>
                         <li><span>Merk:</span> {{ $car->brand->nama }}</li>
                         <li><span>Tahun:</span> {{ $car->tahun }}</li>
-                        <li><span>Transmisi:</span> {{ $car->transmisi }}</li>
+                        <!-- <li><span>Transmisi:</span> {{ $car->transmisi }}</li>
                         <li><span>Mesin:</span> {{ $car->isi_silinder }} cc</li>
-                        <li><span>Kapasitas:</span> {{ $car->kapasitas }} orang</li>
+                        <li><span>Kapasitas:</span> {{ $car->kapasitas }} orang</li> -->
                     </ul>
                 </div>
             </div>

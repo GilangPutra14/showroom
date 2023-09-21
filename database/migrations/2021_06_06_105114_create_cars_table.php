@@ -22,8 +22,8 @@ class CreateCarsTable extends Migration
             $table->bigInteger('harga');
             $table->string('image');
             $table->string('status');
+            $table->string('transmisi');
             // $table->integer('isi_silinder');
-             $table->string('transmisi');
             // $table->integer('tenaga');
             // $table->integer('torsi');
             // $table->string('bahan_bakar');

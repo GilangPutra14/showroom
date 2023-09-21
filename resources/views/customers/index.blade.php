@@ -98,18 +98,18 @@
                     <!-- kolom penampil motor -->
                          <div class="col-lg-4 col-md-4">
                             <div class="car__item">
-                                kolom mobil <div class="car__item__pic__slider owl-carousel">
+                                Data Motor Ready <div class="car__item__pic__slider owl-carousel">
                                     <img src="{{ asset('storage/' . $car->image) }}" alt="" style="width: 262px" height="151px">
                                 </div>
                                 <div class="car__item__text">
                                     <div class="car__item__text__inner">
                                         <div class="label-date">{{ $car->tahun }}</div>
                                         <h5 style="height: 70px !important"><a href="{{ route('detail', $car->id) }}">{{ $car->nama }}</a></h5>
-                                        <ul>
+                                        <!-- <ul>
                                             <li><span>{{ $car->isi_silinder }}</span> cc</li>
                                             <li>Auto</li>
-                                            <li><span>{{ $car->kapasitas }}</span> orang</li>
-                                        </ul>
+                                            <li><span>{{ $car->kapasitas }}</span> Liter</li>
+                                        </ul> -->
                                     </div>
                                     <div class="car__item__price">
                                         <a href="{{ route('transactions.create', $car->id) }}"><span class="car-option">Beli</span></a>

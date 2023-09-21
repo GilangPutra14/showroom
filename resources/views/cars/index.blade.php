@@ -32,7 +32,7 @@
                             <th class="font-weight-semi-bold border-top-0 py-2">#</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Nama Motor</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Merk</th>
-                            <th class="font-weight-semi-bold border-top-0 py-2">Transmisi</th>
+                            <!-- <th class="font-weight-semi-bold border-top-0 py-2">Transmisi</th> -->
                             <!--<th class="font-weight-semi-bold border-top-0 py-2">Bahan Bakar</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Mesin</th>
                             <th class="font-weight-semi-bold border-top-0 py-2">Kapasitas</th> -->

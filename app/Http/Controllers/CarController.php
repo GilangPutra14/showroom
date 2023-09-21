@@ -46,15 +46,15 @@ class CarController extends Controller
             'harga' => 'required|numeric',
             'image' => 'required',
             'status' => 'required',
-            'transmisi' => 'required',
-            'isi_silinder' => 'required|numeric',
-            'tenaga' => 'required|numeric',
-            'torsi' => 'required|numeric',
-            'bahan_bakar' => 'required',
-            'kapasitas' => 'required|numeric',
-            'panjang' => 'required|numeric',
-            'tinggi' => 'required|numeric',
-            'lebar' => 'required|numeric',
+            // 'transmisi' => 'required',
+            // 'isi_silinder' => 'required|numeric',
+            // 'tenaga' => 'required|numeric',
+            // 'torsi' => 'required|numeric',
+            // 'bahan_bakar' => 'required',
+            // 'kapasitas' => 'required|numeric',
+            // 'panjang' => 'required|numeric',
+            // 'tinggi' => 'required|numeric',
+            // 'lebar' => 'required|numeric',
         ]);
 
         if ($request->file('image')) {
@@ -68,15 +68,15 @@ class CarController extends Controller
         $car->harga = $request->get('harga');
         $car->image = $image_name;
         $car->status = $request->get('status');
-        $car->transmisi = $request->get('transmisi');
-        $car->isi_silinder = $request->get('isi_silinder');
-        $car->tenaga = $request->get('tenaga');
-        $car->torsi = $request->get('torsi');
-        $car->bahan_bakar = $request->get('bahan_bakar');
-        $car->kapasitas = $request->get('kapasitas');
-        $car->panjang = $request->get('panjang');
-        $car->tinggi = $request->get('tinggi');
-        $car->lebar = $request->get('lebar');
+        // $car->transmisi = $request->get('transmisi');
+        // $car->isi_silinder = $request->get('isi_silinder');
+        // $car->tenaga = $request->get('tenaga');
+        // $car->torsi = $request->get('torsi');
+        // $car->bahan_bakar = $request->get('bahan_bakar');
+        // $car->kapasitas = $request->get('kapasitas');
+        // $car->panjang = $request->get('panjang');
+        // $car->tinggi = $request->get('tinggi');
+        // $car->lebar = $request->get('lebar');
 
         $brand = new Brand;
         $brand->id = $request->get('brand_id');
@@ -127,15 +127,15 @@ class CarController extends Controller
             'tahun' => 'required',
             'harga' => 'required|numeric',
             'status' => 'required',
-            'transmisi' => 'required',
-            'isi_silinder' => 'required|numeric',
-            'tenaga' => 'required|numeric',
-            'torsi' => 'required|numeric',
-            'bahan_bakar' => 'required',
-            'kapasitas' => 'required|numeric',
-            'panjang' => 'required|numeric',
-            'tinggi' => 'required|numeric',
-            'lebar' => 'required|numeric',
+            // 'transmisi' => 'required',
+            // 'isi_silinder' => 'required|numeric',
+            // 'tenaga' => 'required|numeric',
+            // 'torsi' => 'required|numeric',
+            // 'bahan_bakar' => 'required',
+            // 'kapasitas' => 'required|numeric',
+            // 'panjang' => 'required|numeric',
+            // 'tinggi' => 'required|numeric',
+            // 'lebar' => 'required|numeric',
         ]);
 
         $car = Car::with('brand')->where('id', $id)->first();
@@ -144,15 +144,15 @@ class CarController extends Controller
         $car->tahun = $request->get('tahun');
         $car->harga = $request->get('harga');
         $car->status = $request->get('status');
-        $car->transmisi = $request->get('transmisi');
-        $car->isi_silinder = $request->get('isi_silinder');
-        $car->tenaga = $request->get('tenaga');
-        $car->torsi = $request->get('torsi');
-        $car->bahan_bakar = $request->get('bahan_bakar');
-        $car->kapasitas = $request->get('kapasitas');
-        $car->panjang = $request->get('panjang');
-        $car->tinggi = $request->get('tinggi');
-        $car->lebar = $request->get('lebar');
+        // $car->transmisi = $request->get('transmisi');
+        // $car->isi_silinder = $request->get('isi_silinder');
+        // $car->tenaga = $request->get('tenaga');
+        // $car->torsi = $request->get('torsi');
+        // $car->bahan_bakar = $request->get('bahan_bakar');
+        // $car->kapasitas = $request->get('kapasitas');
+        // $car->panjang = $request->get('panjang');
+        // $car->tinggi = $request->get('tinggi');
+        // $car->lebar = $request->get('lebar');
 
         if ($request->file('image')) {
             if ($car->image && file_exists(storage_path('app/public/' . $car->image))) {

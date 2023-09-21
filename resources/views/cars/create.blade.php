@@ -76,13 +76,13 @@
                         </div>
                     </div>
 
-                    <div class="form-group col-12 col-md-6">
+                    <!-- <div class="form-group col-12 col-md-6">
                             <label for="transmisi">Transmisi</label>
                             <select class="form-control" id="transmisi" name="transmisi">
                                 <option value="Manual">Manual</option>
                                 <option value="Otomatis">Otomatis</option>
                             </select>
-                        </div>
+                        </div> -->
                     
                     <!-- div class="form-row">
                         <div class="form-group col-12 col-md-6">
