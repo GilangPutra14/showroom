@@ -69,7 +69,7 @@ class TransactionController extends Controller
         $customer->save();
 
         $transaction = new Transaction;
-        $transaction->no_nota = 'GR'.date('ymdhis');
+        $transaction->no_nota = 'ENM'.date('ymdhis');
         $transaction->customer_id = $customer->id;
         $transaction->car_id = $request->car_id;
         $transaction->tanggal_pemesanan = date('Y-m-d');

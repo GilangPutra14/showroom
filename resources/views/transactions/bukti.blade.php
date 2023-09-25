@@ -145,10 +145,10 @@
         <h1>BUKTI PEMESANAN</h1>
         <div id="identity">
             <div id="company" class="clearfix">
-                <div>Grain Showroom</div>
-                <div>Jalanin Aja Dulu,<br /> Kali Aja, Jodoh</div>
+                <div>Enam Jaya Motor Showroom</div>
+                <div>Beli Motor Bekas<br /> Berkualitas</div>
                 <div>(+62) 858 8224 5529</div>
-                <div><a href="mailto:grain-showroom@gmail.com">grain-showroom@gmail.com</a></div>
+                <div><a href="mailto:enamjaya-showroom@gmail.com">enamjaya-showroom@gmail.com</a></div>
             </div>
             <div id="project">
                 <div><span>NO. NOTA</span> {{ $transaction->no_nota }}</div>
@@ -166,7 +166,7 @@
         <table>
             <thead>
                 <tr>
-                    <th class="service">NAMA MOBIL</th>
+                    <th class="service">NAMA MOTOR</th>
                     <th>HARGA</th>
                     <th>JUMLAH</th>
                     <th>TOTAL</th>

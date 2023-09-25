@@ -84,9 +84,9 @@
                         </div>
                         <footer class="footer mt-3">
                             <div class="container-fluid">
-                                <!-- <div class="footer-content text-center small">
-                                    <span class="text-muted">&copy; 2019 Graindashboard. All Rights Reserved.</span>
-                                </div> -->
+                                <div class="footer-content text-center small">
+                                    <span class="text-muted">&copy; 2023 EnamJayaShowroom. All Rights Reserved.</span>
+                                </div>
                             </div>
                         </footer>
                     </div>
