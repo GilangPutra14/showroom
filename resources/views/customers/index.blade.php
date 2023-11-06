@@ -1,15 +1,28 @@
 @extends('layouts.master_customer')
 
 @section('content')
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+<div id="panorama" style="max-height:500px;"></div>
+<script>
+pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "{{ asset('storage/images/tour.jpeg') }}",
+    "autoLoad": true
+});
+</script>
+
 <!-- Hero Section Begin -->
-<section class="hero spad set-bg" data-setbg="{{ asset('img/hero-bg.jpg') }}">
+<!-- <section class="hero spad set-bg" data-setbg="{{ asset('img/hero-bg.jpg') }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
                 <div class="hero__text">
                     <div class="hero__text__title">
-                        <span>TEMUKAN MOTOR IMPIAN ANDA !!</span>
-                        <h2>At Enam Jaya Motor</h2>
+                        <span>MOTOR BEKAS BERKUALITAS !!</span>
+                        <h2>Enam Jaya Motor</h2>
                     </div>
                     <div class="hero__text__price">
                         <div class="car-model">Mulai Dari</div>
@@ -19,7 +32,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- Hero Section End -->
 
 <!-- Car Section Begin -->
@@ -100,11 +113,24 @@
                             <div class="car__item">
                                 Data Motor Ready <div class="car__item__pic__slider owl-carousel">
                                     <img src="{{ asset('storage/' . $car->image) }}" alt="" style="width: 262px" height="151px">
+                                    @if($car->image2)
+                                    <img src="{{ asset('storage/' . $car->image2) }}" alt="" style="width: 262px" height="151px">
+                                    @endif
+                                    @if($car->image3)
+                                    <img src="{{ asset('storage/' . $car->image3) }}" alt="" style="width: 262px" height="151px">
+                                    @endif
+                                    @if($car->image4)
+                                    <img src="{{ asset('storage/' . $car->image4) }}" alt="" style="width: 262px" height="151px">
+                                    @endif
+                                    @if($car->image5)
+                                    <img src="{{ asset('storage/' . $car->image5) }}" alt="" style="width: 262px" height="151px">
+                                    @endif
                                 </div>
                                 <div class="car__item__text">
-                                    <div class="car__item__text__inner">
+                                    <div class="car__item__text__inner" style="min-height:180px;">
                                         <div class="label-date">{{ $car->tahun }}</div>
-                                        <h5 style="height: 70px !important"><a href="{{ route('detail', $car->id) }}">{{ $car->nama }}</a></h5>
+                                        <h5><a href="{{ route('detail', $car->id) }}">{{ $car->nama }}</a></h5>
+                                        <p>{{ $car->deskripsi }}</p>
                                         <!-- <ul>
                                             <li><span>{{ $car->isi_silinder }}</span> cc</li>
                                             <li>Auto</li>

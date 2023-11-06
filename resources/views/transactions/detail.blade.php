@@ -121,6 +121,9 @@
                 <form action="{{ route('transactions.update', $transaction->id) }}" method="POST">
                     @csrf
                     @method('PUT')
+                    @if($transaction->bukti_transfer)
+                    <a href="{{ asset('storage/' . $transaction->bukti_transfer) }}" class="btn btn-info" target="_blank">Bukti Transfer</a>
+                    @endif
                     <button type="submit" class="btn btn-success">Pesanan Selesai & Cetak Nota</button>
                     <a href="{{ route('transactions.order') }}" class="btn btn-secondary">Kembali</a>
                 </form>

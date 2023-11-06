@@ -11,7 +11,7 @@ class CustomerController extends Controller
     public function index()
     {
         $brands = Brand::all();
-        $cars = Car::paginate(9);
+        $cars = Car::where('terjual', 0)->paginate(9);
         return view('customers.index', compact('brands', 'cars'));
     }
 
@@ -25,7 +25,7 @@ class CustomerController extends Controller
     {
         $brands = Brand::all();
         $keyword = $request->keyword;
-        $cars = Car::where('nama', 'like', '%' . $keyword . '%')->paginate(9);
+        $cars = Car::where('terjual', 0)->where('nama', 'like', '%' . $keyword . '%')->paginate(9);
         $cars->appends(['keyword' => $keyword]);
         return view('customers.index', compact('brands', 'cars'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -36,6 +36,7 @@ class CustomerController extends Controller
 
         $car = (new Car())->newQuery();
 
+        $car->where('terjual', 0);
         if ($request->merk != '') {
             $car->where('brand_id', $request->merk);
         }

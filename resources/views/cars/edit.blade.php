@@ -17,7 +17,7 @@
                     <li class="breadcrumb-item">
                         <a href="#">Data Motor</a>
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page">Edi Motor</li>
+                    <li class="breadcrumb-item active" aria-current="page">Edit Motor</li>
                 </ol>
             </nav>
             <!-- End Breadcrumb -->
@@ -52,27 +52,33 @@
                             <textarea class="form-control" id="deskripsi" name="deskripsi" cols="30" rows="3">{{ $car->deskripsi }}</textarea>
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-12 col-md-6">
-                            <label for="tahun">Tahun Keluaran</label>
-                            <input type="year" class="form-control" id="tahun" name="tahun" value="{{ $car->tahun }}">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="tahun">Tahun Keluaran</label>
+                                <input type="year" class="form-control" id="tahun" name="tahun" value="{{ $car->tahun }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="harga">Harga Jual</label>
+                                <input type="text" class="form-control" id="harga" name="harga" value="{{ $car->harga }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="transmisi">Transmisi</label>
+                                <select class="form-control" id="transmisi" name="transmisi">
+                                    <option value="Manual" {{ $car->transmisi == 'Manual' ? 'selected' : '' }}>Manual</option>
+                                    <option value="Otomatis" {{ $car->transmisi == 'Otomatis' ? 'selected' : '' }}>Otomatis</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group col-12 col-md-6">
-                            <label for="status">Status</label>
-                            <select class="form-control" id="status" name="status">
-                                <option value="1" {{ $car->status == 1 ? 'selected' : '' }}>Baru</option>
-                                <option value="2" {{ $car->status == 2 ? 'selected' : '' }}>Bekas</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-12 col-md-6">
-                            <label for="harga">Harga Jual</label>
-                            <input type="text" class="form-control" id="harga" name="harga" value="{{ $car->harga }}">
-                        </div>
-                        <div class="form-group col-12 col-md-6">
-                            <label for="image">Foto Motor</label>
-                            <input type="file" class="form-control" id="image" name="image" value="{{ $car->image }}">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="image">Foto Motor</label>
+                                <input type="file" class="form-control" id="image" name="image" value="{{ $car->image }}">
+                                <input type="file" class="form-control" id="image2" name="image2" value="{{ $car->image2 }}">
+                                <input type="file" class="form-control" id="image3" name="image3" value="{{ $car->image3 }}">
+                                <input type="file" class="form-control" id="image4" name="image4" value="{{ $car->image4 }}">
+                                <input type="file" class="form-control" id="image5" name="image5" value="{{ $car->image5 }}">
+                            </div>
                         </div>
                     </div>
                     <div class="form-row">
@@ -81,10 +87,10 @@
                             <input type="number" class="form-control" id="isi_silinder" name="isi_silinder" value="{{ $car->isi_silinder }}">
                         </div> -->
                         <div class="form-group col-12 col-md-6">
-                            <label for="transmisi">Transmisi</label>
-                            <select class="form-control" id="transmisi" name="transmisi">
-                                <option value="Manual" {{ $car->transmisi == 'Manual' ? 'selected' : '' }}>Manual</option>
-                                <option value="Otomatis" {{ $car->transmisi == 'Otomatis' ? 'selected' : '' }}>Otomatis</option>
+                            <label for="status">Status</label>
+                            <select class="form-control" id="status" name="status">
+                                <option value="1" {{ $car->status == 1 ? 'selected' : '' }}>Baru</option>
+                                <option value="2" {{ $car->status == 2 ? 'selected' : '' }}>Bekas</option>
                             </select>
                         </div>
                     </div>

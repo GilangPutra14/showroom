@@ -57,18 +57,15 @@ class CarController extends Controller
             // 'lebar' => 'required|numeric',
         ]);
 
-        if ($request->file('image')) {
-            $image_name = $request->file('image')->store('images', 'public');
-        }
+
 
         $car = new Car;
         $car->nama = $request->get('nama');
         $car->deskripsi = $request->get('deskripsi');
         $car->tahun = $request->get('tahun');
         $car->harga = $request->get('harga');
-        $car->image = $image_name;
         $car->status = $request->get('status');
-        // $car->transmisi = $request->get('transmisi');
+        $car->transmisi = $request->get('transmisi');
         // $car->isi_silinder = $request->get('isi_silinder');
         // $car->tenaga = $request->get('tenaga');
         // $car->torsi = $request->get('torsi');
@@ -77,6 +74,27 @@ class CarController extends Controller
         // $car->panjang = $request->get('panjang');
         // $car->tinggi = $request->get('tinggi');
         // $car->lebar = $request->get('lebar');
+
+        if ($request->file('image')) {
+            $image_name = $request->file('image')->store('images', 'public');
+            $car->image = $image_name;
+        }
+        if ($request->file('image2')) {
+            $image_name2 = $request->file('image2')->store('images', 'public');
+            $car->image2 = $image_name2;
+        }
+        if ($request->file('image3')) {
+            $image_name3 = $request->file('image3')->store('images', 'public');
+            $car->image3 = $image_name3;
+        }
+        if ($request->file('image4')) {
+            $image_name4 = $request->file('image4')->store('images', 'public');
+            $car->image4 = $image_name4;
+        }
+        if ($request->file('image5')) {
+            $image_name5 = $request->file('image5')->store('images', 'public');
+            $car->image5 = $image_name5;
+        }
 
         $brand = new Brand;
         $brand->id = $request->get('brand_id');
@@ -144,7 +162,7 @@ class CarController extends Controller
         $car->tahun = $request->get('tahun');
         $car->harga = $request->get('harga');
         $car->status = $request->get('status');
-        // $car->transmisi = $request->get('transmisi');
+        $car->transmisi = $request->get('transmisi');
         // $car->isi_silinder = $request->get('isi_silinder');
         // $car->tenaga = $request->get('tenaga');
         // $car->torsi = $request->get('torsi');

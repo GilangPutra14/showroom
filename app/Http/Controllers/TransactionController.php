@@ -6,6 +6,7 @@ use App\Models\Transaction;
 use App\Models\Car;
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use PDF;
 
 class TransactionController extends Controller
@@ -75,8 +76,14 @@ class TransactionController extends Controller
         $transaction->tanggal_pemesanan = date('Y-m-d');
         $transaction->tanggal_pengiriman = $request->tanggal_pengiriman;
         $transaction->jenis_pembayaran = $request->jenis_pembayaran;
+        if($request->jenis_pembayaran=='Transfer' && $request->file('bukti')) {
+            $file_name = $request->file('bukti')->store('images', 'public');
+            $transaction->bukti_transfer = $file_name;
+        }
         $transaction->status = 'Pending';
         $transaction->save();
+
+        DB::table('cars')->where('id', $request->car_id)->update(['terjual' => 1]);
 
         return view('transactions.success', ['id' => $transaction->id]);
     }
