@@ -36,7 +36,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="contact__form">
-                    <form action="{{ route('transactions.store') }}" method="POST">
+                    <form action="{{ route('transactions.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6">
@@ -75,7 +75,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="jenis_pembayaran">Jenis Pembayaran</label>
-                                <select name="jenis_pembayaran" id="jenis_pembayaran">
+                                <select name="jenis_pembayaran" id="jenis_pembayaran" onchange="setbukti(this.value)">
                                     <option value="Tunai">Tunai</option>
                                     <option value="Transfer">Transfer</option>
                                 </select>
@@ -83,6 +83,10 @@
                             <div class="col-lg-6">
                                 <label for="tanggal_pengiriman">Target Tanggal Pengiriman</label>
                                 <input type="date" name="tanggal_pengiriman" id="tanggal_pengiriman">
+                            </div>
+                            <div class="col-12" id="filebukti" style="display:none">
+                                <label for="image">Bukti Transfer</label>
+                                <input type="file" class="form-control" id="bukti" name="bukti">
                             </div>
                         </div>
                         <input type="hidden" name="car_id" value="{{ $car->id }}">
@@ -93,5 +97,11 @@
         </div>
     </div>
 </section>
+<script>
+function setbukti(val) {
+    if(val=='Tunai') document.getElementById('filebukti').style.display = 'none'
+    else document.getElementById('filebukti').style.display = 'block'
+}
+</script>
 <!-- Contact Section End -->
 @endsection
