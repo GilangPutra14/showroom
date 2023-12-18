@@ -7,6 +7,7 @@
 
 <div id="panorama" style="max-height:500px;"></div>
 <script>
+    // Tampilan panorama 
 pannellum.viewer('panorama', {
     "type": "equirectangular",
     "panorama": "{{ asset('storage/images/tour.jpeg') }}",
